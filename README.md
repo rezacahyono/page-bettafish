@@ -2,8 +2,8 @@
 --------------------------------
 ## Learn page front-end
 learn front-end web page with youtube video reference 
-- [Page-to](phttps://www.youtube.com/watch?v=91Q6RvKvd7o)
-- [Card-bettafish](https://www.youtube.com/watch?v=W3pQXyjTKps)
+- [Page-Top](phttps://www.youtube.com/watch?v=91Q6RvKvd7o)
+- [Card-Bettafish](https://www.youtube.com/watch?v=W3pQXyjTKps)
 
 ## Library
 - [Vanilla-tilt-js](https://micku7zu.github.io/vanilla-tilt.js/)
