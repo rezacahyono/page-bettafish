@@ -10,4 +10,4 @@ learn front-end web page with youtube video reference
 
 ## Screenshot
 - ![page top](ScreenShot1.PNG)
-- ![Card_bettafish](ScreenShot2.PNG)
+- ![Card_bettafish](ScreenShot2.png)
