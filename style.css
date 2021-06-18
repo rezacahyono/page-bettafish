@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #131313;
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    position: relative;
+    max-width: 110px;
+}
+
+header ul {
+    position: relative;
+    display: flex;  
+}
+header ul li {
+    list-style: none;
+}
+header ul li a{
+    display: inline;
+    color: #fff;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.content .textBox{
+    position: relative;
+    max-width: 600px;
+}
+.content .textBox h2{
+    color: #fff;
+    font-size: 3em;
+    line-height: 1.4em;
+    font-weight: 400;
+}
+.content .textBox h2 span{
+    color: #6613FF;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.content .textBox p{
+    color: #fff;
+}
+
+.content .textBox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #6613FF;
+    color: #fff;
+    border-radius: 40px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.content .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.content .imgBox img{
+    max-width: 390px;
+}
+
+.thumb{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.thumb li:hover{
+    transform: translateY(-15px);
+}
+.thumb li img{
+    max-width: 60px;
+}
+
+.sci{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sci li{
+    list-style: none;
+}
+
+.sci li a{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+}
+
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #6613FF;
+    clip-path: circle(600px at right 100px);
+}
+
+.container-box{
+    margin-top: 200px;
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    transform-style:preserve-3d ;
+}
+.container-box .box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    background: #6613FF;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+
+.container-box .box::before{
+    content: 'BETTA';
+    position: absolute;
+    top: 20px;
+    left: 8px;
+    font-style: bold;
+    font-size: 6em;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transform: 0.5%;
+}
+
+.container-box .box::after{
+    content: 'FISH';
+    position: absolute;
+    bottom: 20px;
+    right: 70px;
+    font-size: 5em;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transform: 0.5%;
+}
+.container-box .box:hover::after,
+.container-box .box:hover::before{
+    opacity: 0.30;
+}
+
+.container-box .box .name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.container-box .box:hover .name{
+    top: 30px;
+    opacity: 1;
+}
+
+.container-box .box .buy{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50px,0,75px);
+    color: #fff;
+    background: #333;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 00.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.container-box .box:hover .buy{
+    bottom: 30px;
+    opacity: 1;
+}
+
+.container-box .box .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    transition: 0.5s;
+    background: #fff;
+    transform-style: preserve-3d;
+    z-index: 10; 
+    opacity: 1;
+    transform: translate3d(-50%,-50%,0px);
+}
+
+.container-box .box .product{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 250px;
+    transition: 0.5s;
+    z-index: 11;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%,50px) rotate(-15deg);
+}
+
+.container-box .box:hover .product{
+    transform: translate3d(-50%,-50%,50px) rotate(-15deg);
+}
+
+.container-box .box:nth-child(1) .buy,
+.container-box .box:nth-child(1) .circle{
+    background: #fc4a44;
+}
+
+.container-box .box:nth-child(2) .buy,
+.container-box .box:nth-child(2) .circle{
+    background: #4abbf7;
+}
+
+.container-box .box:nth-child(3) .buy,
+.container-box .box:nth-child(3) .circle{
+    background: #84a4bf;
+}
+
+
+
+/* Resoponsive */
+
+@media (max-width: 991px){
+    
+    header{
+        padding: 20px 20px 120px;
+    }
+
+    header .logo{
+        max-width: 95px;
+    }
+
+    header ul{
+        display: none;
+    }
+
+    .content{
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    .content .imgBox{
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .content .imgBox img{
+        max-width: 300px;
+    }
+    .content .textBox{
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .content .textBox h2{
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+    .circle{
+        background: #6613FF;
+        clip-path: circle(400px at center bottom);
+    }
+}

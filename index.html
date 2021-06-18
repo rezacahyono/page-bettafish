@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betta World</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"> <img src="logo1.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Catalog</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox" >
+                <h2>ornamental betta fish <br><span class="textBetta">BETTA LINKA</span></h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <a href="#" class="btnLearn">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="ikan4.png" class="fish">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="clone/thumb4.png" onclick="imgSlider('ikan4.png'); changeCircleColor('#6613FF')"></li>
+            <li><img src="clone/thumb2.png" onclick="imgSlider('ikan2.png'); changeCircleColor('#4abbf7')"></li>
+            <li><img src="clone/thumb3.png" onclick="imgSlider('ikan3.png'); changeCircleColor('#84a4bf')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="clone/facebook.png"></a></li>
+            <li><a href="#"><img src="clone/instagram.png"></a></li>
+            <li><a href="#"><img src="clone/twiter.png"></a></li>
+        </ul>
+    </section>
+
+    <div class="container-box">
+        <div class="box">
+            <h2 class="name">Plakat</h2>
+            <a href="#" class="buy">Buy Now</a>
+            <div class="circle"></div>
+            <img src="ikan1.png" class="product">
+        </div>
+
+        <div class="box">
+            <h2 class="name">Paradise</h2>
+            <a href="#" class="buy">Buy Now</a>
+            <div class="circle"></div>
+            <img src="ikan2.png" class="product">
+        </div>
+
+        <div class="box">
+            <h2 class="name">Crown Tail</h2>
+            <a href="#" class="buy">Buy Now</a>
+            <div class="circle"></div>
+            <img src="ikan3.png" class="product">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.fish').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+
+            const textBetta = document.querySelector('.textBetta');
+            textBetta.style.color = color;
+
+            const btnLearn = document.querySelector('.btnLearn');
+            btnLearn.style.background = color;
+
+            var colorBox = document.querySelectorAll(".box");
+            colorBox[0].style.background = color;
+            colorBox[1].style.background = color;
+            colorBox[2].style.background = color;
+        }
+    </script>
+
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".box"), {
+            max: 25,
+            speed: 400
+	    });
+    </script>
+
+</body>
+</html>
